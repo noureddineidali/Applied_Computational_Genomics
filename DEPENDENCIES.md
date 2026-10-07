@@ -1,29 +1,20 @@
 # Dependencies
 
-In this project I used some tools that are not installed by default:
+The exercises use standard Unix tools plus the following bioinformatics tools:
 
-- **eza**: A modern replacement for `ls`.
-- **bioawk**: An extension of `awk` for bioinformatics data.
-- **EMBOSS**: A suite of bioinformatics tools, which includes `geecee`.
+- **BioAWK** for biological file formats
+- **EMBOSS** (`geecee`) for GC-content calculation
+- **Seqtk** and **SeqKit** for FASTA/FASTQ processing
+- **Samtools** for SAM/BAM conversion, sorting, indexing, and pileups
+- **FastQC** for sequencing-read quality control
 
-## Installation
-
-### eza
-
-Instructions for installing eza can be found on the official website: [https://eza-community.github.io/install.html](https://eza-community.github.io/install.html)
-
-### bioawk
-
-`bioawk` can be installed using conda:
+Install them in a dedicated Conda environment:
 
 ```bash
-conda install -c bioconda bioawk
+conda create -n applied-genomics -c conda-forge -c bioconda \
+  bioawk emboss seqtk seqkit samtools fastqc
+conda activate applied-genomics
 ```
 
-### EMBOSS
-
-`EMBOSS` can be installed using conda:
-
-```bash
-conda install -c bioconda emboss
-```
+The notebooks also require a Jupyter installation with a Python kernel. `eza`
+is optional and is used only as a modern directory-listing command.

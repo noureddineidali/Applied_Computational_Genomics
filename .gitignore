@@ -1,2 +1,25 @@
-homework-01/human.genes.gtf
-homework-02/chr22.fa
+# Downloaded genomic data and alignments
+*.gtf
+*.gtf.gz
+*.fa
+*.fa.gz
+*.fasta
+*.fasta.gz
+*.fq
+*.fq.gz
+*.fastq
+*.fastq.gz
+*.sam
+*.bam
+*.bai
+
+# Generated quality-control and rendered files
+fastqc_report/
+*_fastqc.html
+*_fastqc.zip
+README.html
+README_files/
+.ipynb_checkpoints/
+
+# Private coursework notes
+answers_keys.txt
